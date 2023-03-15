@@ -7,7 +7,7 @@ export const getAllSchool = async (req, res) => {
     return responseHandler(
       res,
       200,
-      "Mentor details sent successfully",
+      "All school details sent successfully",
       school
     );
   } catch (err) {
