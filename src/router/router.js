@@ -27,7 +27,6 @@ import { updateSubject } from "../controller/subject/updateSubject";
 import { getSubject } from "../controller/subject/getSubject";
 import { deleteSubject } from "../controller/subject/deleteSubject";
 
-
 router.post("/api/v1/create-class", classCreation);
 router.delete("/api/v1/delete-class/:id", deleteClass);
 router.patch("/api/v1/update-class/:id", updateClass);
@@ -51,7 +50,7 @@ router.delete("/api/v1/delete-student/:id", deleteStudent);
 router.get("/api/v1/all-student", getAllStudent);
 router.get("/api/v1/search-student", searchStudent);
 router.patch("/api/v1/update-student/:id", updateStudent);
-router.get("/api/v1/get-student/:id",getStudent)
+router.get("/api/v1/get-student/:id", getStudent);
 
 router.post("/api/v1/create-subject", subjectCreation);
 router.patch("/api/v1/update-subject/:id", updateSubject);

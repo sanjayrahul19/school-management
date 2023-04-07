@@ -8,6 +8,7 @@ export const classCreation = async (req, res) => {
       school_name: req.body.school_name,
     });
     await classes.save();
+
     return responseHandler(res, 200, "Class created successfully", classes);
   } catch (err) {
     return responseHandler(res, 500, err.message);

@@ -9,16 +9,13 @@ export const getClass = async (req, res) => {
     const classes = await Class.findById({ _id: id }).populate("school_name");
     const student = await Student.find({ class: id }).select("name");
     const mentor = await Mentor.find({ class: id })
-      .populate("subject",{name:1})
+      .populate("subject", { name: 1 })
       .select("name");
-    return responseHandler(
-      res,
-      200,
-      "Class details sent successfully",
+    return responseHandler(res, 200, "Class details sent successfully", {
       classes,
       student,
-      mentor
-    );
+      mentor,
+    });
   } catch (err) {
     return responseHandler(res, 500, err.message);
   }

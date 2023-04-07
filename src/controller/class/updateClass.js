@@ -10,7 +10,7 @@ export const updateClass = async (req, res) => {
       { class_name: req.body.class_name, school_name: req.body.school_name },
       { new: true }
     );
-    return responseHandler(res, 200, "Class updated successfully");
+    return responseHandler(res, 200, "Class updated successfully",classes);
   } catch (err) {
     return responseHandler(res, 500, err.message);
   }
